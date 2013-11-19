@@ -24,18 +24,7 @@
 
   <body>
     <%= render 'layouts/nav' %>
-    <div class='row'>
-      <div class="large-12 columns">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
         <%= yield %>
-      </div>
-      <!--
-      <div class="large-4 columns">
-        <h2>The Side Bar</h2>
-      </div>
-      -->
-    </div>
     <%= render 'layouts/footer' %>
     
     <%= javascript_include_tag "application" %>
