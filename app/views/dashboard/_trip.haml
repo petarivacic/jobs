@@ -1,0 +1,7 @@
+- if @trip_items.any?
+  .trips
+    = render partial: 'trips/trip_item', collection: @trip_items
+- else 
+        %h2 Your feed is empty. 
+        %h2= link_to "Find people to follow", users_path
+        %h2 answer questions or follow people...

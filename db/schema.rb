@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131119232630) do
+ActiveRecord::Schema.define(version: 20131120032204) do
 
   create_table "activities", force: true do |t|
     t.string   "status"
@@ -28,6 +28,20 @@ ActiveRecord::Schema.define(version: 20131119232630) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "trips", force: true do |t|
+    t.integer  "miles"
+    t.integer  "gallons"
+    t.integer  "mpg"
+    t.integer  "score"
+    t.string   "point_a"
+    t.string   "point_b"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "trips", ["user_id"], name: "index_trips_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
