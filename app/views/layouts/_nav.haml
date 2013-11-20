@@ -6,9 +6,18 @@
           Dash Labs
   %section.top-bar-section
     %ul.right
-      %li.divider
-      %li 
-        %a Hello
-      %li.divider
-      %li.has-form
-        %a.button Get Started
+      - if user_signed_in?
+        %li.divider
+          %li.has-dropdown
+            = link_to current_user.email
+            %ul.dropdown
+              %li
+                = link_to 'Dashboard'
+                = link_to 'Logout', destroy_user_session_path(user_session), method: :delete
+      - else 
+        %li.divider
+          %li 
+            = link_to "Sign In", new_user_session_path
+          %li.divider
+          %li.has-form
+            = link_to "Get Started", new_user_registration_path, class: 'button'
