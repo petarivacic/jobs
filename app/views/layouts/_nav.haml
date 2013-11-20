@@ -9,7 +9,7 @@
       - if user_signed_in?
         %li.divider
           %li.has-dropdown
-            = link_to current_user.name
+            = link_to current_user.email
             %ul.dropdown
               %li
                 = link_to 'Dashboard', root_path
