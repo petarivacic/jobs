@@ -1,0 +1,11 @@
+.row
+  .large-12.columns
+    %h2 Sign In
+.row 
+  .large-6.columns
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| 
+      = f.text_field :name, placeholder: "Full Name"
+      = f.email_field :email, placeholder: "Email"
+      = f.password_field :password, placeholder: "Password"
+      = f.submit "Sign Up"
+  .large-6.columns

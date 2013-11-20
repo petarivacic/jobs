@@ -1,8 +1,9 @@
 Dash::Application.routes.draw do
-  resources :users
+
   get "trips/index"
   get "trips/show"
   devise_for :users
+  resources :users
   resources :statuses
   authenticated :user do
     root to: "dashboard#index", as: :authenticated_user
