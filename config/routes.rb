@@ -1,6 +1,10 @@
 Dash::Application.routes.draw do
   devise_for :users
   resources :statuses
+  authenticated :user do
+    root to: "dashboard#index", as: :authenticated_user
+  end
+ 
 
   resources :activities
 

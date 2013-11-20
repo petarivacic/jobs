@@ -1,0 +1,38 @@
+.row
+  .large-12.columns
+.row
+  .large-3.columns
+    #map
+    %h4= link_to "Trip 1" 
+  .large-3.columns
+    = image_tag("http://placehold.it/240x300")
+    %h4= link_to "Trip 2"
+  .large-3.columns
+    = image_tag("http://placehold.it/240x300")
+    %h4= link_to "Trip 3"
+  .large-3.columns
+    = image_tag("http://placehold.it/240x300")
+    %h4= link_to "Trip 4"
+.row
+  .large-12.columns
+    %hr
+.row
+  .large-6.columns
+
+  .large-6.columns
+    %h4 
+      %a Top Of The Charts 
+    .row
+      - row = (1...6)
+      - row.each do
+        %br
+        .large-2.columns
+          = image_tag("logo.jpg")
+        .large-8.columns
+          %h5 User Name
+          %hr
+        .large-2.columns
+          %h5 80.0
+          %hr
+:javascript
+  var map = L.mapbox.map('map', 'examples.map-y7l23tes').setView([37.9, -77], 9); 
