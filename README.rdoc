@@ -1,3 +1,5 @@
 == README
 
-YAY Dash Labs will have their new website by tomorrow. 
+A quick prototype of Dash Ruby on Rails application. 
+
+Petar
